@@ -308,6 +308,7 @@ echo [     '---------------------------------------------------------------'    
 echo [_____________________________________________________________________________]
 
 
+
 :FLASH_KERNEL
 cls
 echo _______________________________________________________________________________
@@ -320,54 +321,29 @@ echo [          '-----------------------------------------------------------'   
 echo [_____________________________________________________________________________]
 echo.
 echo.
-echo  1-  Flash  Iodak Kernel V08 (For Stock Based ROMs)
-echo  2-  Flash  Iodak Kernel V08 (For CM10.1 Based ROMs)
-echo  3-  Flash  Iodak Kernel V07 (For MIUI Based ROMs)
-echo  4-  Flash  Iodak Kernel V08 (For CM10.2)
-echo  5-  Flash  Optimus Prime Kernel V2.7 (For CM10.1 Based ROMs)
-echo  6-  Flash  Optimus Prime Kernel V2.7 (For CM10.2 Based ROMs)
-echo  7-  Flash  Optimus Prime Kernel V2.7 (For MIUI Based ROMs)
-echo  8-  Flash  Optimus Prime Kernel V2.7 (For Stock Based ROMs)
-echo  9-  Flash  Optimus Play! Kernel V2.2 (For CM10.2 Based ROMs)
-echo  10-  Flash  WerewolfJB Kernel V008b (For Stock Based ROMs)
-echo  11- Flash  WerewolfJB Kernel V008b (For CM10.1 Based ROMs)
-echo  12- Flash  WerewolfJB Kernel V008b (For CM10.2 Based ROMs)
-echo  13- Flash  WerewolfJB Kernel V008b (For PA Based ROMs)
-echo  14- Flash  WerewolfJB Kernel V008b (For MIUI Based ROMs)
-echo  15- Flash  PH85 REVOLUTION 1 Kernel (For CM10.2 Based ROMs)
-echo  16- Flash  PH85 REVOLUTION 1 Kernel (For Stock Based ROMs)
-echo  17- Flash  CM10.1 Stock Kernel (For CM10.1 MultiROM)
-echo  18- Flash  Iodak Kernel V07 (For CM10.1 MultiROM)
-echo  19- Flash  Iodak Kernel V07 (For Stock MultiROM)
+echo  1-  Flash  JoinTheRealms CopyCat Kernel v4.2
+echo  2-  Flash  Iodak Kernel V8 
+echo  3-  Flash  Iodak Kernel V9 
+echo  4-  Flash  Iodak Kernel V9.5
+echo  5-  Flash  Iodak Kernel V9.95
 echo  M-  Go Back To Main Menu
 echo  x-  Exit
 echo.
 set /p z=Choose A Number: 
-if %z%==1 (goto IODAK_STOCK)
-if %z%==2 (goto IODAK_CM101)
-if %z%==3 (goto IODAK_MIUI)
-if %z%==4 (goto IODAK_CM102)
-if %z%==5 (goto PRIME10_1)
-if %z%==6 (goto PRIME10_2)
-if %z%==7 (goto PRIME_MIUI)
-if %z%==8 (goto PRIME_STOCK)
-if %z%==9 (goto PLAY)
-if %z%==10 (goto WEREWOLF_STOCK)
-if %z%==11 (goto WEREWOLF_CM10_1)
-if %z%==12 (goto WEREWOLF_CM10_2)
-if %z%==13 (goto WEREWOLF_PA)
-if %z%==14 (goto WEREWOLF_MIUI)
-if %z%==15 (goto PH85_CM10_2)
-if %z%==16 (goto PH85_Stock)
-if %z%==17 (goto CM_STOCK_MR)
-if %z%==18 (goto IODAK_CM101_MR)
-if %z%==19 (goto IODAK_STOCK_MR)
+if %z%==1 (goto CCK4.2)
+if %z%==2 (goto IODAK_v8)
+if %z%==3 (goto IODAK_v9)
+if %z%==4 (goto IODAK_v9.5)
+if %z%==5 (goto IODAK_v9.95)
 if %z%==M (goto main)
 if %z%==x (goto x)
 
 
-:IODAK_STOCK
+
+
+:CCK4.2
 cls
+adb push stuffForAndroid /data/media/tmp
 echo _______________________________________________________________________________
 echo [        --------------------------------------------------------             ]
 echo [        '                                                      '             ]
@@ -381,20 +357,20 @@ echo.
 echo.
 echo.
 pause
+adb shell "su -c chmod -R 777 /data/media/tmp/*"
+adb shell "su -c echo chsnzImg=CCK42 >> /data/media/tmp/setVar.sh"
+adb shell "su -c cd /data/media/tmp"
+adb shell "su -c sh /data/media/tmp/setVar.sh"
+adb shell "su -c sh /data/media/tmp/kernel/kernel.sh"
 echo.
 echo.
 echo.
-pause
-adb sideload IODAK_STOCKv08.zip
-echo.
-echo.
-echo.
-pause
 goto DONE_KERNEL
 
 
-:IODAK_CM101
+:IODAK_v8
 cls
+adb push stuffForAndroid /data/media/tmp
 echo _______________________________________________________________________________
 echo [        --------------------------------------------------------             ]
 echo [        '                                                      '             ]
@@ -408,7 +384,11 @@ echo.
 echo.
 echo.
 pause
-adb sideload IODAK_CM101v08.zip
+adb shell "su -c chmod -R 777 /data/media/tmp/*"
+adb shell "su -c echo chsnzImg=IODAKv8 >> /data/media/tmp/setVar.sh"
+adb shell "su -c cd /data/media/tmp"
+adb shell "su -c sh /data/media/tmp/setVar.sh"
+adb shell "su -c sh /data/media/tmp/kernel/kernel.sh"
 echo.
 echo.
 echo.
@@ -416,8 +396,9 @@ pause
 goto DONE_KERNEL
 
 
-:IODAK_CM102
+:IODAK_v9
 cls
+adb push stuffForAndroid /data/media/tmp
 echo _______________________________________________________________________________
 echo [        --------------------------------------------------------             ]
 echo [        '                                                      '             ]
@@ -431,7 +412,11 @@ echo.
 echo.
 echo.
 pause
-adb sideload IODAK_CM102v08.zip
+adb shell "su -c chmod -R 777 /data/media/tmp/*"
+adb shell "su -c echo chsnzImg=IODAKv9 >> /data/media/tmp/setVar.sh"
+adb shell "su -c cd /data/media/tmp"
+adb shell "su -c sh /data/media/tmp/setVar.sh"
+adb shell "su -c sh /data/media/tmp/kernel/kernel.sh"
 echo.
 echo.
 echo.
@@ -439,8 +424,10 @@ pause
 goto DONE_KERNEL
 
 
-:IODAK_MIUI
+
+:IODAK_v9.5
 cls
+adb push stuffForAndroid /data/media/tmp
 echo _______________________________________________________________________________
 echo [        --------------------------------------------------------             ]
 echo [        '                                                      '             ]
@@ -454,16 +441,22 @@ echo.
 echo.
 echo.
 pause
-pause
-adb sideload IODAK_MIUIv07.zip#echo.
+adb shell "su -c chmod -R 777 /data/media/tmp/*"
+adb shell "su -c echo chsnzImg=IODAKv95 >> /data/media/tmp/setVar.sh"
+adb shell "su -c cd /data/media/tmp"
+adb shell "su -c sh /data/media/tmp/setVar.sh"
+adb shell "su -c sh /data/media/tmp/kernel/kernel.sh"
+echo.
 echo.
 echo.
 pause
 goto DONE_KERNEL
 
 
-:PRIME10_1
+
+:IODAK_9.95
 cls
+adb push stuffForAndroid /data/media/tmp
 echo _______________________________________________________________________________
 echo [        --------------------------------------------------------             ]
 echo [        '                                                      '             ]
@@ -477,35 +470,17 @@ echo.
 echo.
 echo.
 pause
-adb sideload OptimusPrimeV2.7_CM10.1.zip
+adb shell "su -c chmod -R 777 /data/media/tmp/*"
+adb shell "su -c echo chsnzImg=IODAKv995 >> /data/media/tmp/setVar.sh"
+adb shell "su -c cd /data/media/tmp"
+adb shell "su -c sh /data/media/tmp/setVar.sh"
+adb shell "su -c sh /data/media/tmp/kernel/kernel.sh"
 echo.
 echo.
 echo.
 pause
 goto DONE_KERNEL
 
-
-:PRIME10_2
-cls
-echo _______________________________________________________________________________
-echo [        --------------------------------------------------------             ]
-echo [        '                                                      '             ]
-echo [        '       Please Reboot Your Device Into Recovery        '             ]
-echo [        '             Connect Your Device To PC                '             ]
-echo [        ' Then Select "Install Zip From Sideload" And Continue '             ]
-echo [        '                                                      '             ]
-echo [        '------------------------------------------------------'             ]
-echo [_____________________________________________________________________________]
-echo.
-echo.
-echo.
-pause
-adb sideload OptimusPrimeV2.7_CM10.2.zip
-echo.
-echo.
-echo.
-pause
-goto DONE_KERNEL
 
 
 :PRIME_MIUI
