@@ -1,0 +1,61 @@
+CHANGELOG
+
+v1.4.1
+	- Added Iodak Kernel V08 For CM10.2 Based ROMs
+	- Updated TWRP (Now V2.6.3.0)
+	- Updated Iodak Kernel For Stock/CM10.1 Based ROMs (Now V08)
+
+
+v1.4
+	- Added CWM Touch (As Previous Version Was The Non-Touch Version)
+	- Added TWRP With MultiROM Support
+	- Added MultiROM Extension
+	- Removed Autoboot Into Recovery (As This Was Very Buggy And Caused Many Troubles)
+	- Added Optimus Play! Kernel v2.2
+	- Added Optimus Prime Kernel v2.7 For CM10.2/MIUI/Stock Based ROMs
+	- Added WerewolfJB Kernel v008b For CM10.2/PA Based ROMs
+	- Added Iodak Stock & CM Kernel V07 With MultiROM Support
+	- Added CM10.1 Stock Kernel With MultiROM Support
+	- Added PH85 REVOLUTION 1 Kernel For Stock Based ROMs
+	- Updated Optimus Prime Kernel For CM10.1 Based ROMs (Now v2.7)
+	- Updated WerewolfJB Kernel For CM10.1/MIUI/Stock Based ROMs (Now v008b)
+	- Updated PH85 Kernel (Now CM10.2 PH85 REVOLUTION 1)
+
+
+v1.3
+	- Added Requirement Window (Phone Has To Be On Android 4.1.2 Or Above)
+	- Changed Rooting Method [As The "adb reboot recovey" Command Is Only Possible With An Insecure (/Unsecure) Boot Image]
+	- Updated TWRP (Now Version 2.6.0.0)
+	- Updated Optimus Prime Kernel (Now v2.53)
+
+
+v1.2.1
+	- Fixed Typo For Rooting Your Device
+
+
+v1.2
+	- Small Changes On Layout Lines
+	- Udpated Optimus Prime Kernel (Now v2.45)
+	- Updated WerewolfJB Kernel For CM And Stock (Now v007)
+	- Added WerewolfJB Kernel v007 For MIUI
+	- Added Iodak Kernel v07 For MIUI
+	- Added PH85 Kernel v1.55 For Stock
+
+
+v1.1
+	- Huge Changes On Layout Lines
+	- Added Changelog.txt To The .zip ;)
+	- Added Option To View The Changelog
+	- Changed Installation Method Of Kernels (Now You Flash A .zip Instead Of The boot.img)
+	- Removed Subfolder "By OS_Hacking & Afro"
+	- Updated Optimus Prime Kernel (Now v2.11)
+	- Updated Iodak Kernel For CM and Stock (Now v07)
+
+
+v1.0.1
+	- Some Design Changes
+	- Added WherewolfJB Kernel v005 For Stock
+
+
+v.1.0
+	- Initial Release
