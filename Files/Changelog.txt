@@ -1,5 +1,19 @@
 CHANGELOG
 
+v2.1
+	- Switched to a new way to flash kernels
+	- Strings: Updated
+
+
+v2.0
+	- Taken over by balloon27 & JoinTheRealms
+	- Recovery: Updated CWM (Now v6.0.4.5)
+	- Recovery: Updated TWRP (Now v2.7.0.0)
+	- Recovery: Updated TWRP for MultiRom (Now v2.7.0.0)
+	- Flashing the included MultiRom is NOT recommended! Wait for an update!
+	- Kernel: Updated entire section. Removed outdated kernels, added newer ones
+
+
 v1.4.1
 	- Added Iodak Kernel V08 For CM10.2 Based ROMs
 	- Updated TWRP (Now V2.6.3.0)
