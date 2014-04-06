@@ -323,6 +323,8 @@ if %z%==x (goto x)
 :CCK_v4.2
 cls
 adb push stuffForAndroid /data/media/tmp
+adb push zImages\CCKv42 /data/media/tmp/kernel
+adb push modules\cck4-2 /system/lib/modules/
 echo _______________________________________________________________________________
 echo [        --------------------------------------------------------             ]
 echo [        '                                                      '             ]
@@ -336,11 +338,12 @@ echo.
 echo.
 echo.
 pause
-adb shell "su -c chmod -R 777 /data/media/tmp/*"
-adb shell "su -c echo chsnzImg=CCKv42 >> /data/media/tmp/setVar.sh"
-adb shell "su -c cd /data/media/tmp"
-adb shell "su -c sh /data/media/tmp/setVar.sh"
-adb shell "su -c sh /data/media/tmp/kernel/kernel.sh"
+adb shell "su -c 'chmod -R 777 /data/media/tmp/*'"
+adb shell "su -c 'echo chsnzImg=CCKv42 >> /data/media/tmp/setVar.sh'"
+adb shell "su -c 'cd /data/media/tmp'"
+adb shell "su -c 'sh /data/media/tmp/setVar.sh'"
+adb shell "su -c 'sh /data/media/tmp/kernel/kernel.sh'"
+pause
 echo.
 echo.
 echo.
