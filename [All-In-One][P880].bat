@@ -152,8 +152,7 @@ pause
 echo. Copying files, Please wait ... 
 echo.
 adb push TWRP_2700.img /mnt/sdcard/TWRP_2700.img
-adb shell "su -c 'cat /mnt/sdcard/TWRP_2700.img >/dev/block/mmcblk0p1'"
-adb shell "su -c 'sync'"
+adb shell "su -c 'dd if=/mnt/sdcard/TWRP_2700.img of=/dev/block/mmcblk0p1'"
 adb shell "rm /mnt/sdcard/TWRP_2700.img"
 goto DONE
 
@@ -171,8 +170,7 @@ pause
 echo. Copying files, Please wait ... 
 echo.
 adb push TWRP_MR.img /mnt/sdcard/TWRP_MR.img
-adb shell "su -c 'cat /mnt/sdcard/TWRP_MR.img >/dev/block/mmcblk0p1'"
-adb shell "su -c 'sync'"
+adb shell "su -c 'dd if=/mnt/sdcard/TWRP_MR.img of=/dev/block/mmcblk0p1'"
 adb shell "rm /mnt/sdcard/TWRP_MR.img"
 goto DONE
 
@@ -190,8 +188,7 @@ pause
 echo. Copying files, Please wait ... 
 echo.
 adb push UNS_BOOT.img /mnt/sdcard/UNS_BOOT.img
-adb shell "su -c 'cat /mnt/sdcard/UNS_BOOT.img >/dev/block/mmcblk0p2'"
-adb shell "su -c 'sync'"
+adb shell "su -c 'dd if=/mnt/sdcard/UNS_BOOT.img of=/dev/block/mmcblk0p2'"
 adb shell "rm /mnt/sdcard/UNS_BOOT.img"
 goto DONE
 
@@ -209,8 +206,7 @@ pause
 echo. Copying files, Please wait ... 
 echo.
 adb push OR_BOOT.img /mnt/sdcard/OR_BOOT.img
-adb shell "su -c 'cat /mnt/sdcard/OR_BOOT.img >/dev/block/mmcblk0p2'"
-adb shell "su -c 'sync'"
+adb shell "su -c 'dd if=/mnt/sdcard/OR_BOOT.img of=/dev/block/mmcblk0p2'"
 adb shell "rm /mnt/sdcard/OR_BOOT.img"
 goto DONE
 
@@ -228,8 +224,7 @@ pause
 echo. Copying files, Please wait ... 
 echo.
 adb push O4X_CWM_6045.img /mnt/sdcard/O4X_CWM_6045.img
-adb shell "su -c 'cat /mnt/sdcard/O4X_CWM_6045.img >/dev/block/mmcblk0p1'"
-adb shell "su -c 'sync'"
+adb shell "su -c 'dd if=/mnt/sdcard/O4X_CWM_6045.img of=/dev/block/mmcblk0p1'"
 adb shell "rm /mnt/sdcard/O4X_CWM_6045.img"
 goto DONE
 
@@ -247,8 +242,7 @@ pause
 echo Copying files, Please wait... 
 echo.
 adb push O4X_OR_R.img /mnt/sdcard/O4X_OR_R.img
-adb shell "su -c 'cat /mnt/sdcard/O4X_OR_R.img >/dev/block/mmcblk0p1'"
-adb shell "su -c 'sync'"
+adb shell "su -c 'dd if=/mnt/sdcard/O4X_OR_R.img of=/dev/block/mmcblk0p1'"
 adb shell "rm /mnt/sdcard/O4X_OR_R.img"
 goto DONE
 
